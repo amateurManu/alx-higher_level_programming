@@ -1,0 +1,1 @@
+This directory covers more tasks on data structures; lists and dictionaries mostly learned in the ALX SE Program. Code written in Python and commit messages for the files give a brief description for what the script does.

@@ -20,7 +20,7 @@ def matrix_divided(matrix, div):
             If div is not an integer/number
             If the lists of the matrix do not have the same size
 
-        ZeroDivisionError: 
+        ZeroDivisionError:
             If div is zero
     """
 

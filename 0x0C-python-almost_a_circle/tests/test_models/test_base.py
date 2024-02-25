@@ -8,11 +8,12 @@ from io import StringIO
 from unittest import TestCase
 from unittest.mock import patch
 
+
 class TestBaseMethods(unittest.TestCase):
-    """ Suit for testing Base class """
+    """ Suite to test Base class """
 
     def setUp(self):
-        """ Method invoked for each testing """
+        """ Method invoked for each test """
         Base._Base__nb_objects = 0
 
     def test_id(self):
@@ -62,13 +63,14 @@ class TestBaseMethods(unittest.TestCase):
     def test_save_to_file_1(self):
         """ Test JSON file """
         Square.save_to_file(None)
-        result = "[]\n"
+        res = "[]\n"
         with open("Square.json", "r") as file:
             with patch('sys.stdout', new=StringIO()) as str_out:
                 print(file.read())
-                self.assertEqual(str_out.getvalue(), result)
+                self.assertEqual(str_out.getvalue(), res)
+
         try:
-            os.remove("Square,json")
+            os.remove("Square.json")
         except:
             pass
 
@@ -79,11 +81,11 @@ class TestBaseMethods(unittest.TestCase):
     def test_save_to_file_2(self):
         """ Test JSON file """
         Rectangle.save_to_file(None)
-        result = "[]\n"
+        res = "[]\n"
         with open("Rectangle.json", "r") as file:
-            with patch('sys.stdout', new=stringIO()) as str_out:
+            with patch('sys.stdout', new=StringIO()) as str_out:
                 print(file.read())
-                self.assertEqual(str_out.getvalue(), result)
+                self.assertEqual(str_out.getvalue(), res)
         try:
             os.remove("Rectangle.json")
         except:

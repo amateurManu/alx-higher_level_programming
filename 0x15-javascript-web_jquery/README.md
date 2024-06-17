@@ -19,4 +19,4 @@ How to listen/bind to DOM events.
 File edition done on `vi`\
 All files interpreted on Chrome (version 57.0)\
 Files are `semistandard` compliant with the flag `--global $`:`semistandard *.js --global $`\
-JQuery version 3.x\
+JQuery version 3.x
